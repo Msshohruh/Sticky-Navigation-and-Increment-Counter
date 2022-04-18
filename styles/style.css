@@ -128,7 +128,10 @@ main{
     position: fixed;
     top: 0;
     left: 0;
-    background: rgb(190, 35, 35);
+    /* background: rgb(190, 35, 35); */
+    background: url('../img/eberhard-grossgasteiger-y2azHvupCVo-unsplash.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
     opacity: 0;
     z-index: 1;
 }
@@ -138,6 +141,7 @@ main{
     right: 20px;
     cursor: pointer;
     text-shadow: none;
+    color: #fff;
 }
 .active-navbar-list{
     width: fit-content;
