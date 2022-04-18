@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=My+Soul&family=Roboto+Slab:wght@500&display=swap');
+
+:root {
+    --text-color: #fff;
+    --text-hover: #000;
+}
+
+/* SCROLLBAR STYLES */
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: 5px 5px 5px -5px transparent;
+    background-color: transparent;
+    border: none;
+}
+  
+::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%,
+                      color-stop(.5, #BBBEC6),
+                      color-stop(.5, transparent), to(transparent));
+}
+/* SCROLLBAR STYLES END*/
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Roboto Slab', serif;
+    font-size: 16px;
+    color: #000;
+}
+header{
+    width: 100%;
+    background: url('../img/zongnan-bao-B0_anM2-wNM-unsplash.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+main{
+    flex-grow: 1;
+}    
+/* HEADER SECTION STYLES */
+
+.site-header {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.075);
+    padding: 15px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    text-shadow: 2px 2px 5px #000;
+}
+.site-logo {
+    height: 100%;
+    display: flex;
+    text-decoration: none;
+    font-family: 'My Soul', cursive;
+    font-size: 60px;
+    cursor: pointer;
+    color: var(--text-color);
+}
+.site-logo:hover {
+    color: var(--text-hover);
+    text-shadow: 2px 2px 5px #000;
+}
+.site-logo:active {
+    opacity: 0.6;
+
+}
+.show-btn {
+    display: none;
+    font-size: 36px;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+.navbar-list {
+    list-style: none;
+}
+.navbar-list:hover .navbar-list-item-link{
+    text-shadow: 2px 2px 5px #000;
+    color: var(--text-hover);
+}
+.navbar-list:active .navbar-list-item-link{
+    opacity: 0.6;
+}
+.navbar-list-item {
+    display: inline-block;
+    cursor: pointer;
+    transform: skew(-20deg);
+    padding: 0 10px;
+}
+.navbar-list-item:not(:last-child) {
+    margin-right: 20px;
+}
+.navbar-list-item:hover .navbar-list-item-link{
+    color: var(--text-color);
+    text-decoration: underline;
+}
+.navbar-list-item:active .navbar-list-item-link{
+    opacity: 1;
+}
+.navbar-list-item-link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 22px;
+    font-weight: 500;
+}
+.hidden-nav{
+    display: none;
+}
+.active-navbar{
+    --text-color: #fff;
+    --text-hover: #000;
+    text-shadow: 2px 2px 5px #000;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgb(190, 35, 35);
+    opacity: 0;
+    z-index: 1;
+}
+.closer-navbar{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    text-shadow: none;
+}
+.active-navbar-list{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: 15vh auto;
+}
+.active-navbar-list .navbar-list-item:not(:last-child) {
+    margin-bottom: 20px;
+}
+.active-navbar-list .navbar-list-item-link {
+    font-size: 48px;
+}
+
+.counter-container {
+    width: 100%;
+    max-width: 500px;
+    position: absolute;
+    top: 5px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8px;
+    transform: translateX(150px);
+    opacity: 0;
+}
+.counter-content {
+    text-align: center;
+    margin: 20px 40px;
+    color: var(--text-color);
+}
+.counter{
+    font-size: 16px;
+}
+
+.hidden {
+    display: none;
+}
+.transform {
+    opacity: 1;
+    transform: translateX(220px);
+    transition: all 2s ease;
+}
+
+
+.white-header {
+    background-color: #fff;
+    --text-color: #000;
+    --text-hover: #fff;
+    transition: all 1s ease;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.404);
+}
+/* HEADER SECTION STYLES END*/
+
+/* HEADER-HERO SECTION STYLES */
+
+.header-hero {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-hero-title {
+    font-size: 100px;
+    font-family: 'My Soul', cursive;
+    color: #fff;
+    padding: 0 20px;
+    text-shadow: 2px 2px 5px #000;
+}
+
+/* HEADER-HERO SECTION STYLES END*/
+
+/* MAIN SECTION STYLES */
+
+.container{
+    width: 100%;
+}
+.container img{
+    width: 100%;
+}
+
+/* MAIN SECTION STYLES END*/
+
+
+@media (max-width: 700px) {
+    .navbar {
+        display: none;
+    }
+    .show-btn {
+        display: block;
+    }
+    .counter {
+        font-size: 12px;
+    }
+    .header-hero-title{
+        font-size: 60px;
+    }
+}
+@media (max-width: 1100px) {
+    .transform {
+        transform: translateX(0);
+        top: 100px;
+    }
+    .counter-container {
+        transform: translateX(0);
+    }
+    .header-hero-title {
+        text-align: center;
+    }
+}
